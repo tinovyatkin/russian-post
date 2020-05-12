@@ -63,7 +63,7 @@ jobs:
       TERM: xterm-256color
       RUSSIAN_POST_LOGIN: ${{ secrets.RUSSIAN_POST_LOGIN }}
       RUSSIAN_POST_PASSWORD: ${{ secrets.RUSSIAN_POST_PASSWORD }}
-    # needs: lint-package
+    needs: lint-package
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
