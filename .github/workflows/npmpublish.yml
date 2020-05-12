@@ -6,13 +6,12 @@ on:
       - master
 
 jobs:
-  env:
-    CI: true
-    TERM: xterm-256color
-    RUSSIAN_POST_LOGIN: ${{ secrets.RUSSIAN_POST_LOGIN }}
-    RUSSIAN_POST_PASSWORD: ${{ secrets.RUSSIAN_POST_PASSWORD }}
-
   test:
+    env:
+      CI: true
+      TERM: xterm-256color
+      RUSSIAN_POST_LOGIN: ${{ secrets.RUSSIAN_POST_LOGIN }}
+      RUSSIAN_POST_PASSWORD: ${{ secrets.RUSSIAN_POST_PASSWORD }}
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
@@ -59,6 +58,11 @@ jobs:
       - run: npx npmPkgJsonLint .
 
   publish-npm:
+    env:
+      CI: true
+      TERM: xterm-256color
+      RUSSIAN_POST_LOGIN: ${{ secrets.RUSSIAN_POST_LOGIN }}
+      RUSSIAN_POST_PASSWORD: ${{ secrets.RUSSIAN_POST_PASSWORD }}
     # needs: lint-package
     runs-on: ubuntu-latest
     steps:
