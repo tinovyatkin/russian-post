@@ -102,8 +102,22 @@ export class Tracking {
   }
 }
 
-const tracking = new Tracking({
-  login: 'DkMRhUOMHzyLRl',
-  password: 'zKjyRE5TXsBy',
-});
-tracking.getHistory('RS253346199NL');
+/**
+ * Codes of operations types that considered final operations
+ * operType -> operAttr[]
+ * @see {@link https://tracking.pochta.ru/support/dictionaries/operation_codes}
+ */
+export const FinalOperations: Map<number, number[] | undefined> = new Map([
+  // delivery
+  [2, [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14]],
+  // Failure to deliver
+  [5, [1, 2]],
+  // 	Handed over for temporary storage
+  [15, undefined],
+  // Destruction
+  [16, undefined],
+  // Registration of property rights
+  [17, undefined],
+  // Registration of the loss
+  [18, undefined],
+]);
