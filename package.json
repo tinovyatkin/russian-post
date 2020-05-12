@@ -20,7 +20,7 @@
   "scripts": {
     "build": "tsc",
     "lint": "eslint --ext=ts ./src",
-    "prepublishOnly": "jest --passWithNoTests && tsc",
+    "prepublishOnly": "yarn test && yarn build",
     "test": "node -r dotenv/config --trace-warnings --unhandled-rejections=strict --expose-gc node_modules/jest-cli/bin/jest --detectOpenHandles --logHeapUsage"
   },
   "dependencies": {
