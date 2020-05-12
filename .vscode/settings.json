@@ -57,7 +57,7 @@
     "**/.gtm": true,
     "**/.DS_Store": true,
     "jest_?/**": true,
-    "node_modules": true,
+    "node_modules": false,
     ".jestcache": true,
     ".eslintcache": true,
     "**/.sonarlint": true
