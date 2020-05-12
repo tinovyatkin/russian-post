@@ -17,14 +17,21 @@
     "plugin:@typescript-eslint/recommended",
     "plugin:@typescript-eslint/recommended-requiring-type-checking",
     "prettier",
-    "prettier/@typescript-eslint"
+    "prettier/@typescript-eslint",
+    "plugin:node/recommended"
   ],
   "globals": {
     "Atomics": "readonly",
     "SharedArrayBuffer": "readonly"
   },
   "rules": {
-    "@typescript-eslint/require-await": "off"
+    "@typescript-eslint/require-await": "off",
+    "node/no-unsupported-features/es-syntax": [
+      "error",
+      {
+        "ignores": ["modules"]
+      }
+    ]
   },
   "overrides": [
     {
@@ -50,5 +57,10 @@
         "max-lines": "off"
       }
     }
-  ]
+  ],
+  "settings": {
+    "node": {
+      "tryExtensions": [".js", ".json", ".node", ".ts"]
+    }
+  }
 }

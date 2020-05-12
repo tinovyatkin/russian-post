@@ -1,0 +1,793 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Russian Post tracking API return tracking history 1`] = `
+Array [
+  Object {
+    "address": Object {
+      "countryFrom": Object {
+        "code2A": "NL",
+        "code3A": "NLD",
+        "id": 528,
+        "nameEn": "Netherlands",
+        "nameRu": "Нидерланды",
+      },
+      "countryOper": Object {
+        "code2A": "NL",
+        "code3A": "NLD",
+        "id": 528,
+        "nameEn": "Netherlands",
+        "nameRu": "Нидерланды",
+      },
+      "mailDirect": Object {
+        "code2A": "RU",
+        "code3A": "RUS",
+        "id": 643,
+        "nameEn": "Russian Federation",
+        "nameRu": "Российская Федерация",
+      },
+      "operationAddress": Object {
+        "description": "Netherlands NLAMSC",
+      },
+    },
+    "finance": Object {
+      "customDuty": 0,
+    },
+    "item": Object {
+      "barcode": "RS253346199NL",
+      "complexItemName": "Letter registered",
+      "mailCtg": Object {
+        "id": 1,
+        "name": "Registered",
+      },
+      "mailType": Object {
+        "id": 2,
+        "name": "Letter",
+      },
+      "validEnType": false,
+      "validRuType": false,
+    },
+    "operation": Object {
+      "operAttr": Object {
+        "id": 5,
+        "name": "Arrival at transit office of exchange",
+      },
+      "operDate": 2015-05-09T12:07:00.000Z,
+      "operType": Object {
+        "id": 8,
+        "name": "Processing",
+      },
+    },
+    "user": Object {
+      "rcpn": undefined,
+      "sndr": undefined,
+    },
+  },
+  Object {
+    "address": Object {
+      "countryFrom": Object {
+        "code2A": "NL",
+        "code3A": "NLD",
+        "id": 528,
+        "nameEn": "Netherlands",
+        "nameRu": "Нидерланды",
+      },
+      "countryOper": Object {
+        "code2A": "NL",
+        "code3A": "NLD",
+        "id": 528,
+        "nameEn": "Netherlands",
+        "nameRu": "Нидерланды",
+      },
+      "mailDirect": Object {
+        "code2A": "RU",
+        "code3A": "RUS",
+        "id": 643,
+        "nameEn": "Russian Federation",
+        "nameRu": "Российская Федерация",
+      },
+      "operationAddress": Object {
+        "description": "Netherlands NLAMSC",
+      },
+    },
+    "finance": Object {
+      "customDuty": 0,
+    },
+    "item": Object {
+      "barcode": "RS253346199NL",
+      "complexItemName": "Letter registered",
+      "mailCtg": Object {
+        "id": 1,
+        "name": "Registered",
+      },
+      "mailType": Object {
+        "id": 2,
+        "name": "Letter",
+      },
+      "validEnType": false,
+      "validRuType": false,
+    },
+    "operation": Object {
+      "operAttr": Object {
+        "id": 0,
+      },
+      "operDate": 2015-05-09T12:07:00.000Z,
+      "operType": Object {
+        "id": 10,
+        "name": "Export of international mail",
+      },
+    },
+    "user": Object {
+      "rcpn": undefined,
+      "sndr": undefined,
+    },
+  },
+  Object {
+    "address": Object {
+      "countryFrom": Object {
+        "code2A": "NL",
+        "code3A": "NLD",
+        "id": 528,
+        "nameEn": "Netherlands",
+        "nameRu": "Нидерланды",
+      },
+      "countryOper": Object {
+        "code2A": "RU",
+        "code3A": "RUS",
+        "id": 643,
+        "nameEn": "Russian Federation",
+        "nameRu": "Российская Федерация",
+      },
+      "destinationAddress": Object {
+        "description": "Simferopol\` 53",
+        "index": "295053",
+      },
+      "mailDirect": Object {
+        "code2A": "RU",
+        "code3A": "RUS",
+        "id": 643,
+        "nameEn": "Russian Federation",
+        "nameRu": "Российская Федерация",
+      },
+      "operationAddress": Object {
+        "description": "Sheremet\`evo MMPO PCI-7",
+        "index": "104007",
+      },
+    },
+    "finance": Object {
+      "airRate": 0,
+      "customDuty": 0,
+      "insrRate": 0,
+      "massRate": 0,
+      "payment": 0,
+      "rate": 0,
+      "value": 0,
+    },
+    "item": Object {
+      "barcode": "RS253346199NL",
+      "complexItemName": "Small packet registered",
+      "internum": "RS253346199NL",
+      "mailCtg": Object {
+        "id": 1,
+        "name": "Registered",
+      },
+      "mailRank": Object {
+        "id": 0,
+        "name": "Without rank",
+      },
+      "mailType": Object {
+        "id": 5,
+        "name": "Small packet",
+      },
+      "mass": 370,
+      "postMark": Object {
+        "id": 0,
+        "name": "Without mark",
+      },
+      "validEnType": false,
+      "validRuType": true,
+    },
+    "operation": Object {
+      "operAttr": Object {
+        "id": 13,
+        "name": "Arrived at the territory of Russian Federation",
+      },
+      "operDate": 2015-05-15T19:35:00.000Z,
+      "operType": Object {
+        "id": 8,
+        "name": "Processing",
+      },
+    },
+    "user": Object {
+      "rcpn": undefined,
+      "sendCtg": Object {
+        "id": 0,
+      },
+      "sndr": undefined,
+    },
+  },
+  Object {
+    "address": Object {
+      "countryFrom": Object {
+        "code2A": "NL",
+        "code3A": "NLD",
+        "id": 528,
+        "nameEn": "Netherlands",
+        "nameRu": "Нидерланды",
+      },
+      "countryOper": Object {
+        "code2A": "RU",
+        "code3A": "RUS",
+        "id": 643,
+        "nameEn": "Russian Federation",
+        "nameRu": "Российская Федерация",
+      },
+      "destinationAddress": Object {
+        "description": "Simferopol\` 53",
+        "index": "295053",
+      },
+      "mailDirect": Object {
+        "code2A": "RU",
+        "code3A": "RUS",
+        "id": 643,
+        "nameEn": "Russian Federation",
+        "nameRu": "Российская Федерация",
+      },
+      "operationAddress": Object {
+        "description": "MR LC Vnukovo Cex-1 MMPO",
+        "index": "102976",
+      },
+    },
+    "finance": Object {
+      "airRate": 0,
+      "customDuty": 0,
+      "insrRate": 0,
+      "massRate": 0,
+      "payment": 0,
+      "rate": 0,
+      "value": 0,
+    },
+    "item": Object {
+      "barcode": "RS253346199NL",
+      "complexItemName": "Small packet registered",
+      "internum": "RS253346199NL",
+      "mailCtg": Object {
+        "id": 1,
+        "name": "Registered",
+      },
+      "mailRank": Object {
+        "id": 0,
+        "name": "Without rank",
+      },
+      "mailType": Object {
+        "id": 5,
+        "name": "Small packet",
+      },
+      "mass": 370,
+      "postMark": Object {
+        "id": 0,
+        "name": "Without mark",
+      },
+      "validEnType": false,
+      "validRuType": true,
+    },
+    "operation": Object {
+      "operAttr": Object {
+        "id": 0,
+      },
+      "operDate": 2015-05-17T13:08:00.000Z,
+      "operType": Object {
+        "id": 9,
+        "name": "Import of international mail",
+      },
+    },
+    "user": Object {
+      "rcpn": "Priymak Aleksandr Aleksandrovich",
+      "sendCtg": Object {
+        "id": 4,
+        "name": "International operator",
+      },
+      "sndr": undefined,
+    },
+  },
+  Object {
+    "address": Object {
+      "countryOper": Object {
+        "code2A": "RU",
+        "code3A": "RUS",
+        "id": 643,
+        "nameEn": "Russian Federation",
+        "nameRu": "Российская Федерация",
+      },
+      "mailDirect": Object {
+        "code2A": "RU",
+        "code3A": "RUS",
+        "id": 643,
+        "nameEn": "Russian Federation",
+        "nameRu": "Российская Федерация",
+      },
+      "operationAddress": Object {
+        "description": "MR LC Vnukovo Cex-1 MMPO",
+        "index": "102976",
+      },
+    },
+    "finance": Object {
+      "airRate": 0,
+      "customDuty": 0,
+      "insrRate": 0,
+      "massRate": 0,
+      "payment": 0,
+      "rate": 0,
+      "value": 0,
+    },
+    "item": Object {
+      "barcode": "RS253346199NL",
+      "complexItemName": "Small packet registered",
+      "mailCtg": Object {
+        "id": 1,
+        "name": "Registered",
+      },
+      "mailRank": Object {
+        "id": 0,
+        "name": "Without rank",
+      },
+      "mailType": Object {
+        "id": 5,
+        "name": "Small packet",
+      },
+      "mass": 370,
+      "postMark": Object {
+        "id": 0,
+        "name": "Without mark",
+      },
+      "validEnType": false,
+      "validRuType": true,
+    },
+    "operation": Object {
+      "operAttr": Object {
+        "id": 1,
+      },
+      "operDate": 2015-05-18T01:15:00.000Z,
+      "operType": Object {
+        "id": 11,
+        "name": "Handed over to customs",
+      },
+    },
+    "user": Object {
+      "rcpn": undefined,
+      "sendCtg": Object {
+        "id": 0,
+      },
+      "sndr": undefined,
+    },
+  },
+  Object {
+    "address": Object {
+      "countryOper": Object {
+        "code2A": "RU",
+        "code3A": "RUS",
+        "id": 643,
+        "nameEn": "Russian Federation",
+        "nameRu": "Российская Федерация",
+      },
+      "operationAddress": Object {
+        "description": "MR LC Vnukovo Cex-1 MMPO",
+        "index": "102976",
+      },
+    },
+    "finance": Object {
+      "airRate": 0,
+      "customDuty": 0,
+      "insrRate": 0,
+      "massRate": 0,
+      "payment": 0,
+      "rate": 0,
+      "value": 0,
+    },
+    "item": Object {
+      "barcode": "RS253346199NL",
+      "complexItemName": "Small packet registered",
+      "mailCtg": Object {
+        "id": 1,
+        "name": "Registered",
+      },
+      "mailType": Object {
+        "id": 5,
+        "name": "Small packet",
+      },
+      "mass": 370,
+      "validEnType": false,
+      "validRuType": true,
+    },
+    "operation": Object {
+      "operAttr": Object {
+        "id": 1,
+        "name": "Released by custom house",
+      },
+      "operDate": 2015-05-18T01:16:00.000Z,
+      "operType": Object {
+        "id": 14,
+        "name": "Customs clearance",
+      },
+    },
+    "user": Object {
+      "rcpn": undefined,
+      "sendCtg": Object {
+        "id": 0,
+      },
+      "sndr": undefined,
+    },
+  },
+  Object {
+    "address": Object {
+      "countryFrom": Object {
+        "code2A": "NL",
+        "code3A": "NLD",
+        "id": 528,
+        "nameEn": "Netherlands",
+        "nameRu": "Нидерланды",
+      },
+      "countryOper": Object {
+        "code2A": "RU",
+        "code3A": "RUS",
+        "id": 643,
+        "nameEn": "Russian Federation",
+        "nameRu": "Российская Федерация",
+      },
+      "operationAddress": Object {
+        "description": "MR LC Vnukovo Cex-1 MMPO",
+        "index": "102976",
+      },
+    },
+    "finance": Object {
+      "airRate": 0,
+      "customDuty": 0,
+      "insrRate": 0,
+      "massRate": 0,
+      "payment": 0,
+      "rate": 0,
+      "value": 0,
+    },
+    "item": Object {
+      "barcode": "RS253346199NL",
+      "complexItemName": "Small packet registered",
+      "mailCtg": Object {
+        "id": 1,
+        "name": "Registered",
+      },
+      "mailType": Object {
+        "id": 5,
+        "name": "Small packet",
+      },
+      "mass": 0,
+      "validEnType": false,
+      "validRuType": true,
+    },
+    "operation": Object {
+      "operAttr": Object {
+        "id": 6,
+        "name": "Departure from transit office of exchange",
+      },
+      "operDate": 2015-05-20T07:36:00.000Z,
+      "operType": Object {
+        "id": 8,
+        "name": "Processing",
+      },
+    },
+    "user": Object {
+      "rcpn": "Priymak Aleksandr Aleksandrovich",
+      "sendCtg": Object {
+        "id": 0,
+      },
+      "sndr": undefined,
+    },
+  },
+  Object {
+    "address": Object {
+      "countryFrom": Object {
+        "code2A": "NL",
+        "code3A": "NLD",
+        "id": 528,
+        "nameEn": "Netherlands",
+        "nameRu": "Нидерланды",
+      },
+      "countryOper": Object {
+        "code2A": "RU",
+        "code3A": "RUS",
+        "id": 643,
+        "nameEn": "Russian Federation",
+        "nameRu": "Российская Федерация",
+      },
+      "operationAddress": Object {
+        "description": "Moskva PCI-2",
+        "index": "104002",
+      },
+    },
+    "finance": Object {
+      "airRate": 0,
+      "customDuty": 0,
+      "insrRate": 0,
+      "massRate": 0,
+      "payment": 0,
+      "rate": 0,
+      "value": 0,
+    },
+    "item": Object {
+      "barcode": "RS253346199NL",
+      "complexItemName": "Small packet registered",
+      "mailCtg": Object {
+        "id": 1,
+        "name": "Registered",
+      },
+      "mailType": Object {
+        "id": 5,
+        "name": "Small packet",
+      },
+      "mass": 0,
+      "validEnType": false,
+      "validRuType": true,
+    },
+    "operation": Object {
+      "operAttr": Object {
+        "id": 0,
+        "name": "Sorting",
+      },
+      "operDate": 2015-05-20T18:09:00.000Z,
+      "operType": Object {
+        "id": 8,
+        "name": "Processing",
+      },
+    },
+    "user": Object {
+      "rcpn": "Priymak Aleksandr Aleksandrovich",
+      "sendCtg": Object {
+        "id": 0,
+      },
+      "sndr": undefined,
+    },
+  },
+  Object {
+    "address": Object {
+      "countryFrom": Object {
+        "code2A": "NL",
+        "code3A": "NLD",
+        "id": 528,
+        "nameEn": "Netherlands",
+        "nameRu": "Нидерланды",
+      },
+      "countryOper": Object {
+        "code2A": "RU",
+        "code3A": "RUS",
+        "id": 643,
+        "nameEn": "Russian Federation",
+        "nameRu": "Российская Федерация",
+      },
+      "operationAddress": Object {
+        "description": "Moskva PCI-1",
+        "index": "104001",
+      },
+    },
+    "finance": Object {
+      "airRate": 0,
+      "customDuty": 0,
+      "insrRate": 0,
+      "massRate": 0,
+      "payment": 0,
+      "rate": 0,
+      "value": 0,
+    },
+    "item": Object {
+      "barcode": "RS253346199NL",
+      "complexItemName": "Small packet registered",
+      "mailCtg": Object {
+        "id": 1,
+        "name": "Registered",
+      },
+      "mailType": Object {
+        "id": 5,
+        "name": "Small packet",
+      },
+      "mass": 0,
+      "validEnType": false,
+      "validRuType": true,
+    },
+    "operation": Object {
+      "operAttr": Object {
+        "id": 4,
+        "name": "Departure from inward office of exchange",
+      },
+      "operDate": 2015-05-21T19:08:00.000Z,
+      "operType": Object {
+        "id": 8,
+        "name": "Processing",
+      },
+    },
+    "user": Object {
+      "rcpn": undefined,
+      "sendCtg": Object {
+        "id": 0,
+      },
+      "sndr": undefined,
+    },
+  },
+  Object {
+    "address": Object {
+      "countryOper": Object {
+        "code2A": "RU",
+        "code3A": "RUS",
+        "id": 643,
+        "nameEn": "Russian Federation",
+        "nameRu": "Российская Федерация",
+      },
+      "operationAddress": Object {
+        "description": "Simferopol\` COPP Uch. Obmena",
+        "index": "295904",
+      },
+    },
+    "finance": Object {
+      "customDuty": 0,
+    },
+    "item": Object {
+      "barcode": "RS253346199NL",
+      "complexItemName": "Small packet registered",
+      "mailCtg": Object {
+        "id": 1,
+        "name": "Registered",
+      },
+      "mailType": Object {
+        "id": 5,
+        "name": "Small packet",
+      },
+      "validEnType": false,
+      "validRuType": true,
+    },
+    "operation": Object {
+      "operAttr": Object {
+        "id": 4,
+        "name": "Departure from inward office of exchange",
+      },
+      "operDate": 2015-05-29T03:57:00.000Z,
+      "operType": Object {
+        "id": 8,
+        "name": "Processing",
+      },
+    },
+    "user": Object {
+      "rcpn": undefined,
+      "sndr": undefined,
+    },
+  },
+  Object {
+    "address": Object {
+      "countryFrom": Object {
+        "code2A": "NL",
+        "code3A": "NLD",
+        "id": 528,
+        "nameEn": "Netherlands",
+        "nameRu": "Нидерланды",
+      },
+      "countryOper": Object {
+        "code2A": "RU",
+        "code3A": "RUS",
+        "id": 643,
+        "nameEn": "Russian Federation",
+        "nameRu": "Российская Федерация",
+      },
+      "mailDirect": Object {
+        "code2A": "RU",
+        "code3A": "RUS",
+        "id": 643,
+        "nameEn": "Russian Federation",
+        "nameRu": "Российская Федерация",
+      },
+      "operationAddress": Object {
+        "description": "Simferopol\` 53",
+        "index": "295053",
+      },
+    },
+    "finance": Object {
+      "customDuty": 0,
+    },
+    "item": Object {
+      "barcode": "RS253346199NL",
+      "complexItemName": "Small packet registered",
+      "mailCtg": Object {
+        "id": 1,
+        "name": "Registered",
+      },
+      "mailRank": Object {
+        "id": 0,
+        "name": "Without rank",
+      },
+      "mailType": Object {
+        "id": 5,
+        "name": "Small packet",
+      },
+      "mass": 370,
+      "validEnType": false,
+      "validRuType": true,
+    },
+    "operation": Object {
+      "operAttr": Object {
+        "id": 2,
+        "name": "Arrival at delivery office",
+      },
+      "operDate": 2015-05-29T09:25:00.000Z,
+      "operType": Object {
+        "id": 8,
+        "name": "Processing",
+      },
+    },
+    "user": Object {
+      "rcpn": undefined,
+      "sndr": undefined,
+    },
+  },
+  Object {
+    "address": Object {
+      "countryFrom": Object {
+        "code2A": "NL",
+        "code3A": "NLD",
+        "id": 528,
+        "nameEn": "Netherlands",
+        "nameRu": "Нидерланды",
+      },
+      "countryOper": Object {
+        "code2A": "RU",
+        "code3A": "RUS",
+        "id": 643,
+        "nameEn": "Russian Federation",
+        "nameRu": "Российская Федерация",
+      },
+      "mailDirect": Object {
+        "code2A": "RU",
+        "code3A": "RUS",
+        "id": 643,
+        "nameEn": "Russian Federation",
+        "nameRu": "Российская Федерация",
+      },
+      "operationAddress": Object {
+        "description": "Simferopol\` 53",
+        "index": "295053",
+      },
+    },
+    "finance": Object {
+      "customDuty": 0,
+      "rate": 0,
+    },
+    "item": Object {
+      "barcode": "RS253346199NL",
+      "complexItemName": "Small packet registered",
+      "mailCtg": Object {
+        "id": 1,
+        "name": "Registered",
+      },
+      "mailRank": Object {
+        "id": 0,
+        "name": "Without rank",
+      },
+      "mailType": Object {
+        "id": 5,
+        "name": "Small packet",
+      },
+      "mass": 370,
+      "validEnType": false,
+      "validRuType": true,
+    },
+    "operation": Object {
+      "operAttr": Object {
+        "id": 1,
+        "name": "Delivery to the addressee",
+      },
+      "operDate": 2015-05-29T12:10:00.000Z,
+      "operType": Object {
+        "id": 2,
+        "name": "Delivery",
+      },
+    },
+    "user": Object {
+      "rcpn": undefined,
+      "sndr": undefined,
+    },
+  },
+]
+`;
