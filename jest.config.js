@@ -4,8 +4,9 @@ module.exports = {
   testEnvironment: 'node',
   verbose: true,
   collectCoverage: true,
-  coverageReporters: ['text', 'json', 'cobertura', 'lcov'],
-  collectCoverageFrom: ['<rootDir>/src/**/*.ts?(x)'],
+  coverageReporters: ['text', 'json', 'lcov'],
+  collectCoverageFrom: ['<rootDir>/src/**/*.ts'],
+  testMatch: ['**/?(*.)+(test).ts'],
   moduleFileExtensions: ['ts', 'js'],
   coverageProvider: 'v8',
   testRunner: 'jest-circus/runner',
@@ -15,5 +16,15 @@ module.exports = {
     '<rootDir>/dist/',
     '<rootDir>/coverage/',
     '<rootDir>/.vscode/',
+  ],
+  reporters: [
+    'default',
+    [
+      'jest-sonar',
+      {
+        outputDirectory: './reports',
+        outputName: 'jest-reporter.xml',
+      },
+    ],
   ],
 };

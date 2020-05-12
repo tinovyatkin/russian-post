@@ -11,7 +11,7 @@
   "bugs": {
     "url": "https://github.com/tinovyatkin/russian-post/issues"
   },
-  "version": "1.0.1",
+  "version": "1.0.2",
   "main": "dist/index.js",
   "files": [
     "dist/**/*.d.ts",
@@ -20,24 +20,26 @@
   "scripts": {
     "build": "tsc",
     "lint": "eslint --ext=ts ./src",
-    "prepublishOnly": "jest --passWithNoTests && tsc",
-    "test": "jest"
+    "prepublishOnly": "yarn test && yarn build",
+    "test": "node -r dotenv/config --trace-warnings --unhandled-rejections=strict --expose-gc node_modules/jest-cli/bin/jest --detectOpenHandles --logHeapUsage"
   },
   "dependencies": {
     "camel-case": "4.1.1",
-    "object-to-camel-case": "1.0.0",
     "strong-soap": "2.0.0"
   },
   "devDependencies": {
     "@types/jest": "latest",
     "@typescript-eslint/eslint-plugin": "latest",
     "@typescript-eslint/parser": "latest",
+    "dotenv": "8.2.0",
     "eslint": "7.0.0",
     "eslint-config-prettier": "latest",
     "eslint-plugin-jest": "latest",
+    "eslint-plugin-node": "11.1.0",
     "husky": "latest",
     "jest": "26.0.1",
     "jest-circus": "26.0.1",
+    "jest-sonar": "0.2.8",
     "lint-staged": "latest",
     "npm-package-json-lint": "latest",
     "prettier": "latest",
@@ -47,10 +49,13 @@
     "weak-napi": "2.0.1"
   },
   "keywords": [
+    "api",
     "russian post",
+    "tracking",
     "Почта России"
   ],
   "engines": {
+    "node": ">=10.20",
     "yarn": ">=1.19"
   }
 }
