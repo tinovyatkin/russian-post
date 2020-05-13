@@ -10,6 +10,7 @@
       "name": "Launch current file",
       "program": "${file}",
       "skipFiles": ["<node_internals>/**"],
+      "envFile": "${workspaceFolder}/.env",
       "sourceMaps": true,
       "smartStep": true,
       "preLaunchTask": "tsc: build - tsconfig.json",
@@ -31,12 +32,13 @@
         "--colors"
       ],
       "cwd": "${workspaceFolder}",
+      "envFile": "${workspaceFolder}/.env",
       "console": "internalConsole",
       "internalConsoleOptions": "openOnSessionStart",
       "program": "${workspaceFolder}/node_modules/jest/bin/jest",
       "sourceMaps": true,
       "smartStep": true,
-      "skipFiles": ["<node_internals>/**"],
+      "skipFiles": ["<node_internals>/**", "node_modules/jest/**"],
       "outFiles": ["${workspaceFolder}/dist/**/*.js"]
     }
   ]

@@ -31,7 +31,8 @@
       {
         "ignores": ["modules"]
       }
-    ]
+    ],
+    "no-empty": ["error", { "allowEmptyCatch": true }]
   },
   "overrides": [
     {
