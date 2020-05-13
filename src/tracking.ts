@@ -6,9 +6,10 @@ import { deepObjectToCamelCase } from './lib/deep-object-to-camel-case';
 
 const createClient = promisify(soap.createClient);
 
-const RUSSIAN_POST_WSDL = 'https://tracking.russianpost.ru/rtm34?wsdl';
+const RUSSIAN_POST_SINGLE_WSDL = 'https://tracking.russianpost.ru/rtm34?wsdl';
+// const RUSSIAN_POST_BATCH_WSDL = 'https://tracking.russianpost.ru/fc?wsdl';
 
-let trackingClient: { getOperationHistory: Function };
+let trackingSingleClient: { getOperationHistory: Function };
 
 interface OperationHistoryParams {}
 
@@ -27,28 +28,53 @@ interface HistoryArguments {
 interface TrackingResult {}
 
 async function getHistory(params: HistoryArguments): Promise<TrackingResult> {
-  if (!trackingClient) {
-    trackingClient = await createClient(RUSSIAN_POST_WSDL);
+  if (!trackingSingleClient) {
+    trackingSingleClient = await createClient(RUSSIAN_POST_SINGLE_WSDL);
   }
   if (!getOperationHistory) {
-    getOperationHistory = promisify(trackingClient.getOperationHistory) as (
-      args: OperationHistoryParams,
-    ) => Promise<unknown>;
+    getOperationHistory = promisify(
+      trackingSingleClient.getOperationHistory,
+    ) as (args: OperationHistoryParams) => Promise<unknown>;
   }
 
-  const history = (await getOperationHistory({
-    OperationHistoryRequest: {
-      Barcode: params.barCode,
-      MessageType: params.messageType || 0,
-      Language: params.language || 'RUS',
-    },
-    AuthorizationHeader: {
-      login: params.login,
-      password: params.password,
-    },
-  })) as {
-    OperationHistoryData: { historyRecord: unknown[] };
-  };
+  let history;
+  try {
+    history = (await getOperationHistory({
+      OperationHistoryRequest: {
+        Barcode: params.barCode,
+        MessageType: params.messageType || 0,
+        Language: params.language || 'RUS',
+      },
+      AuthorizationHeader: {
+        login: params.login,
+        password: params.password,
+      },
+    })) as {
+      OperationHistoryData: {
+        historyRecord: unknown[];
+      };
+    };
+  } catch (err) {
+    // we will cleanup error message for Soap errors
+    // it's like this:
+    // " Code: {"Value":"S:Receiver"} Reason: {"Text":{"$attributes":{"lang":"en"},"$value":"Error"}} Detail: {"OperationHistoryFaultReason":"The format of the request data is invalid"}"
+    // looks like incomplete JSON
+    try {
+      const faultReason = /{\s*"OperationHistoryFaultReason"\s*:\s*"(?<reason>[^"]+)"\s*}/.exec(
+        err.message,
+      )?.groups?.reason;
+      if (faultReason) err.message = faultReason;
+    } catch {}
+    throw err;
+  }
+
+  // if tracking code is formatted correctly, but non existent then API will return
+  // {OperationHistoryData: undefined}
+  // let's throw more prominent error in this case
+  if (history && !history.OperationHistoryData)
+    throw new ReferenceError(
+      `Unable to find operations history for tracking code "${params.barCode}"`,
+    );
 
   // let's transform keys AddressParameters, FinanceParameters, etc -> address, finance
   const result = history.OperationHistoryData.historyRecord.map(record =>
