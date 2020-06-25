@@ -1,3 +1,6 @@
+/* eslint-disable @typescript-eslint/no-misused-promises */
+/* eslint-disable @typescript-eslint/no-unsafe-assignment */
+/* eslint-disable @typescript-eslint/no-unsafe-member-access */
 /* eslint-disable @typescript-eslint/no-empty-interface */
 import { soap } from 'strong-soap';
 import { promisify } from 'util';
@@ -9,11 +12,10 @@ const createClient = promisify(soap.createClient);
 const RUSSIAN_POST_SINGLE_WSDL = 'https://tracking.russianpost.ru/rtm34?wsdl';
 // const RUSSIAN_POST_BATCH_WSDL = 'https://tracking.russianpost.ru/fc?wsdl';
 
-let trackingSingleClient: { getOperationHistory: Function };
-
 interface OperationHistoryParams {}
 
 let getOperationHistory: (args: OperationHistoryParams) => Promise<unknown>;
+let trackingSingleClient: { getOperationHistory: typeof getOperationHistory };
 
 type SupportedLanguage = 'RUS' | 'ENG';
 type MessageType = 0 | 1;
@@ -34,7 +36,7 @@ async function getHistory(params: HistoryArguments): Promise<TrackingResult> {
   if (!getOperationHistory) {
     getOperationHistory = promisify(
       trackingSingleClient.getOperationHistory,
-    ) as (args: OperationHistoryParams) => Promise<unknown>;
+    ) as typeof getOperationHistory;
   }
 
   let history;
