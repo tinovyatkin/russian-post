@@ -28,7 +28,7 @@
     "strong-soap": "2.0.0"
   },
   "devDependencies": {
-    "@types/jest": "26.0.10",
+    "@types/jest": "26.0.12",
     "@typescript-eslint/eslint-plugin": "4.0.1",
     "@typescript-eslint/parser": "4.0.1",
     "dotenv": "8.2.0",
